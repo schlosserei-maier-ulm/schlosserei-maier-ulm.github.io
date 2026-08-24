@@ -44,7 +44,7 @@ Navigate to base URL, hard-reload (ignore cache).
 - [ ] **No `{BASE}` or `%7BBASE%7D` in any URL or text** (critical)
 
 ### 1.2 Hero Section
-- [ ] Heading "Metallbau mit Präzision..." visible
+- [ ] Heading "Ihr Spezialist in der Bearbeitung von Edelstahl-..." visible
 - [ ] Subtext mentions "Privatkunden, öffentliche Auftraggeber und Industrie"
 - [ ] CTA buttons: "Leistungen entdecken" → `#services`, "Kontakt & Anfahrt" → `#contact`
 - [ ] 3 hero images load (all HTTP 200):
@@ -53,7 +53,7 @@ Navigate to base URL, hard-reload (ignore cache).
   3. `Balkongeländer-Milchglasfüllung.jpg` — alt "Balkongeländer"
 
 ### 1.3 About Section (`#about`)
-- [ ] Heading "Herzlich willkommen bei Maier Metallbau"
+- [ ] Heading "Herzlich willkommen bei der Maier Metallbau GmbH"
 - [ ] Text mentions "3. Generation" and "Familienbetrieb"
 - [ ] Customer list includes: DB Deutsche Bahn, Stadtwerke Ulm, Stadt Ulm
 - [ ] Team info: "4 Metallbau-Meister · 1 Geselle · 2 Auszubildende"
@@ -94,14 +94,14 @@ Navigate to base URL, hard-reload (ignore cache).
 ### 1.7 Apprenticeship Section (`#apprenticeship`)
 - [ ] Heading mentions "Metallbauer (m/w/d)"
 - [ ] "Fachrichtung Konstruktionstechnik" present
-- [ ] Email link to `Schlosserei-Maier@freenet.de`
+- [ ] Email link to `schlosserei-maier@freenet.de`
 - [ ] Link "Details zur Ausbildung" → `pages/ausbildung.html`
 - [ ] Image `Ausbildungsbescheinigung-HwK-Ulm.jpg` loads (HTTP 200)
 
 ### 1.8 Contact Section (`#contact`)
 - [ ] Address: "Schillerstr. 50, 89077 Ulm"
 - [ ] Phone: "0731 63784"
-- [ ] Email link to `Schlosserei-Maier@freenet.de`
+- [ ] Email link to `schlosserei-maier@freenet.de`
 - [ ] "Anfahrt & Route" button → `pages/anfahrt.html`
 - [ ] "Google Maps öffnen" link → external Google Maps URL
 - [ ] Image `Schillerstrasse50.jpg` loads (HTTP 200)
@@ -297,7 +297,7 @@ Navigate to gallery page, hard-reload.
 - [ ] Breadcrumb: "Start" → `../index.html`
 - [ ] No console errors
 - [ ] Content mentions "Metallbauer (m/w/d)" and "Konstruktionstechnik"
-- [ ] Email link to `Schlosserei-Maier@freenet.de`
+- [ ] Email link to `schlosserei-maier@freenet.de`
 - [ ] **1 image**: `Ausbildungsbescheinigung-HwK-Ulm.jpg` loads (HTTP 200)
 
 ### 5.2 Öffnungszeiten (`/pages/oeffnungszeiten.html`)
@@ -327,7 +327,7 @@ Navigate to impressum page, hard-reload. Verify all required legal content per *
 - [ ] **Company name:** "Maier Metallbau GmbH"
 - [ ] **Address:** "Schillerstraße 50", "89077 Ulm"
 - [ ] **Phone:** "0731 63784"
-- [ ] **Email:** "Schlosserei-Maier@freenet.de" (as clickable `mailto:` link)
+- [ ] **Email:** "schlosserei-maier@freenet.de" (as clickable `mailto:` link)
 - [ ] **Vertreten durch:** "Stefan Maier"
 
 ### 6.2 Required Registration Info

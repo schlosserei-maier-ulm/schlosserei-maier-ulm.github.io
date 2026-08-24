@@ -281,7 +281,7 @@ git add -A && git commit -m "..." && git push
    - Original had `/ausbildung-zum-metallbauer-beschreibung/` as a separate page with detailed profession info (job tasks, requirements, qualifications). The redesign integrates key points into the Ausbildung page directly. The detailed Bundesagentur-style text about the profession is condensed into practical bullet points. No content loss.
 
 5. **Email address consistent** (OK)
-   - Both sites use `Schlosserei-Maier@freenet.de`
+   - Both sites use `schlosserei-maier@freenet.de`
 
 6. **Job posting year outdated on original** (INFO)
    - Original says "Herbst 2025", redesign also says "Start Herbst 2025". Both should be updated to "Herbst 2026" before launch.
@@ -305,6 +305,64 @@ git add -A && git commit -m "..." && git push
 - [x] **Rename camera-filename images** (DSC/IMG) — ✅ Completed (2026-04-22). 13 camera-filenames renamed to descriptive German names; updated all HTML/JS references.
 - [x] **Lighthouse audit** — ✅ Completed (2026-04-22). Results: Performance 66%, Accessibility 98%, Best Practices 96%, SEO 91%. CLS fixed with aspect-ratio CSS.
 - [x] **Push to GitHub and verify deployment** — ✅ Completed (2026-04-22). All changes deployed to origin/main; GitHub Pages live with all renamed images working.
+
+---
+
+## Customer Feedback: Text Deviations from Original Site (2026-08-24)
+
+Customer reported that texts differ from the original page. Detailed text-only comparison
+(pure formatting differences like `·` vs `.`, time notation, or email capitalization excluded).
+
+**Status: ✅ All items resolved (2026-08-24).** Changes uncommitted — see next steps below.
+
+### A. Willkommen / Über uns (index.html, `#about`)
+
+| # | Original | New | Type | Revert/Keep |
+|---|----------|-----|------|-------------|
+| **A1** | „Herzlich willkommen bei **der** Maier Metallbau **GmbH**" | „Herzlich willkommen bei Maier Metallbau" | Wording shortened | ✅ reverted |
+| **A2** | „Mit **dieser** Erfahrung planen und fertigen wir individuell nach den Wünschen **und Vorstellungen** unserer Kunden. **Dabei stehen wir für höchste Qualität und Zuverlässigkeit.**" | „Mit **jahrzehntelanger** Erfahrung planen und fertigen wir individuell nach den Wünschen unserer Kunden **– von Einzelstücken bis zu kompletten Anlagen.**" | Rewritten | ✅ reverted |
+| **A3** | „**Wir arbeiten für Privatkunden, sowie für städtische und staatliche Einrichtungen. Zu unseren Kunden gehören u. a. Firmen wie die** DB Deutsche Bahn, … **Staatliche Hochbauamt, Stadt Ulm, Stadt Neu-Ulm,** … **Otis Aufzüge, ThyssenKrupp Aufzüge, REWE-Märkte** und Noerpel Logistik." | „**Unsere Kunden: Privatkunden, Kommunen und Industrie, u. a.** DB Deutsche Bahn, … **Staatliches Hochbauamt, Stadt Ulm/Neu-Ulm,** … **OTIS, ThyssenKrupp, REWE** und Noerpel Logistik." | Rewritten + company names shortened | ✅ reverted, placed in box (`card card--border`) |
+| **A4** | „**Gute Mitarbeiter sind das wertvollste Kapital eines Unternehmens!**" (heading) + „Wir sind stolz auf unser Team und freuen uns, dass wir langjährige Mitarbeiter in unserem Betrieb beschäftigen. Außerdem schauen wir in die Zukunft und bilden seit Jahrzehnten im Beruf Metallbauer (Konstruktionstechnik) aus." + „Die Erfahrung ‚der Alten' in Verbindung mit dem Tatendrang ‚der Jungen' ergibt für uns ein optimales Ergebnis." | **Completely missing** on new site | **Content dropped** | ✅ reverted (block restored) |
+| **A5** | „**Zurzeit beschäftigen wir:** 4 Metallbau-Meister . 1 **Metallbau-**Geselle . …" | „**Team:** 4 Metallbau-Meister · 1 Geselle · …" | Wording shortened | ✅ reverted |
+| **A6** | Tagline „**Ihr Spezialist in der Bearbeitung von Edelstahl-, Aluminium- und Stahlblechen!**" (site subtitle + h3 on homepage) | Replaced by „Metallbau mit Präzision in Edelstahl, Aluminium und Stahl" (hero h1) | Rewritten | ✅ reverted (now hero h1) |
+| **A7** | „**Auf den nachfolgenden Seiten können Sie sich einen Überblick über unser vielseitiges Leistungsangebot machen.**" | Missing (replaced by new services intro) | Content dropped | ✅ done – adapted: „Verschaffen Sie sich einen Überblick …" |
+
+### B. Ausbildung (index.html `#apprenticeship` + pages/ausbildung.html)
+
+| # | Original | New | Type | Revert/Keep |
+|---|----------|-----|------|-------------|
+| **B1** | „Für Herbst **2025** suchen wir …" | „Für Herbst **2026** suchen wir …" | Intentional year update | ✅ kept |
+| **B2** | „**Sollten Sie Interesse haben, freuen wir uns auf Ihre schriftliche Bewerbung an:** Maier Metallbau GmbH, Schillerstr. 50, 89077 Ulm **oder per E-Mail an:** …" | „Bewirb dich per E-Mail an … oder per Post an …" (Du-form!) | **Rewritten, Sie→Du form change** | ✅ reverted (index + ausbildung) |
+| **B3** | — (no original source) | „Das lernst du bei uns" / „Das bringst du mit" lists, „Rahmenbedingungen" table (Dauer 3,5 Jahre, Vergütung nach Tarif, etc.) | **Newly invented content** | ✅ done – replaced with original IHK Berufsbeschreibung |
+| **B4** | — | Index teaser had invented Du-form text („Du arbeitest nach Zeichnung…") + condensed requirements list | Newly invented content | ✅ removed – shortened to original wording |
+
+### C. Newly written texts with no original source (cannot be reverted, only removed/adjusted)
+
+| # | Location | New text | Revert/Keep |
+|---|----------|----------|-------------|
+| **C1** | Hero (index) | „Wir planen und fertigen nach Ihren Vorstellungen – für Privatkunden, öffentliche Auftraggeber und Industrie. Qualität, Zuverlässigkeit und saubere Ausführung stehen bei uns an erster Stelle." | ✅ kept |
+| **C2** | Services intro (index) | „Wir fertigen Balkone, Treppen, Geländer, Vordächer, Türen, Briefkastenanlagen, Sonderkonstruktionen und mehr…" | ✅ kept |
+| **C3** | All 8 service card descriptions (index) | e.g. „Stahl, Edelstahl oder Aluminium mit Glas, Lamellen oder Trespa-Füllungen." — original site had **no** such texts | ✅ kept |
+| **C4** | Contact section (index) | „Wir freuen uns auf Ihre Anfrage", pill list „Planung & Beratung / Fertigung & Montage / Wartung & Reparatur" | ✅ kept |
+| **C5** | Anfahrt page | „Unsere Werkstatt liegt verkehrsgünstig…" — original page had only address + Maps link | ✅ reverted (sentence removed) |
+
+**Most likely customer concern:** A2, A3, A4 (rewritten/dropped „Über uns" texts) and B2 (formal „Sie" became informal „Du") + B3 (invented Rahmenbedingungen).
+
+### Changed files (uncommitted)
+
+- `index.html` — hero h1, Über-uns section, Ausbildungs-Teaser
+- `pages/ausbildung.html` — full IHK Berufsbeschreibung, Sie-form application
+- `pages/anfahrt.html` — intro sentence removed
+- `tests/deployment-test.md` — heading checks updated to reverted texts
+- `TODO.md` — this comparison table
+
+### Next steps
+
+- [ ] Run `bash tests/run-tests.sh`
+- [ ] Visual check on local server (`python3 -m http.server 8000`)
+- [ ] Add CHANGELOG.md entry
+- [ ] Commit + push → GitHub Pages deploy
+- [ ] Verify live site & inform customer
 
 ---
 

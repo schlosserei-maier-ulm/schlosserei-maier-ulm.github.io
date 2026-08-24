@@ -4,6 +4,21 @@ All notable changes to the Maier Metallbau website.
 
 ---
 
+## 2026-08-24: Revert texts to original site wording (customer feedback)
+- **Task:** Customer reported texts deviating from the original WordPress site. Full text comparison in TODO.md (items A1–A7, B1–B4, C1–C5).
+- **Changes:**
+   - `index.html`: Hero h1 reverted to original tagline „Ihr Spezialist in der Bearbeitung von Edelstahl-, Aluminium- und Stahlblechen!"; „Über uns" section restored to original wording (Willkommens-Überschrift mit „der … GmbH", Original-Absätze, Kundenliste in Box, wiederhergestellter Block „Gute Mitarbeiter sind das wertvollste Kapital eines Unternehmens!", „Zurzeit beschäftigen wir: …"); Ausbildungs-Teaser auf Original-Wortlaut gekürzt (Sie-Form, Du-Form-Texte entfernt)
+   - `pages/ausbildung.html`: Erfundene Inhalte („Das lernst du bei uns", „Rahmenbedingungen"-Tabelle) ersetzt durch Original-IHK-Berufsbeschreibung von /ausbildung-zum-metallbauer-beschreibung/
+   - `pages/anfahrt.html`: Erfundenen Intro-Satz entfernt
+   - `pages/oeffnungszeiten.html`: Hartkodierte Zeiten-Tabelle durch dynamisches `#opening-hours` (messages.json als Single Source) ersetzt
+   - `data/messages.json`: Öffnungszeiten-Notiz auf Original-Wortlaut („Gerne vereinbaren wir Termine außerhalb der Geschäftszeiten.")
+   - E-Mail-Adresse überall auf Kleinschreibung (`schlosserei-maier@freenet.de`)
+   - `tests/deployment-test.md`: Heading-Checks an revertierte Texte angepasst
+- **Kept:** Herbst 2026 (Jahres-Update), neue Service-Karten-Texte, Hero-Lede, Kontakt-Sektion (C1–C4 laut Kundenentscheidung)
+- **Verified:** `tests/run-tests.sh` 23/23 passed; visuelle Prüfung Startseite + Ausbildungsseite via lokalem Server
+
+---
+
 ## 2026-04-22: Contact section pill-list markup fixed to semantic list structure
 - **Task:** Fix contact section three-item list to use proper HTML list structure.
 - **Issue:** Contact section ("Planung & Beratung", "Fertigung & Montage", "Wartung & Reparatur") was using `<div class="pill-list">` with `<span>` children instead of semantic `<ul>` with `<li>` elements, resulting in plain text rendering with spaces instead of styled list items.
