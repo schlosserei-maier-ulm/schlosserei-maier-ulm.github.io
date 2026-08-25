@@ -4,6 +4,17 @@ All notable changes to the Maier Metallbau website.
 
 ---
 
+## 2026-08-25: Light/Dark mode via system preference + toggle (customer feedback)
+- **Task:** Customer found the site too dark; requested respecting system/browser light/dark preference plus a manual toggle.
+- **Changes:**
+   - `assets/css/style.css`: All hardcoded dark colors converted to CSS variables (`--body-bg`, `--line`, `--card-bg`, `--heading`, etc.); light theme via `@media (prefers-color-scheme: light)` and `[data-theme="light"]` override; `color-scheme` property set for native controls; `.theme-toggle` button styling
+   - `includes/header.html`: Theme toggle button (☀/☾) added to header
+   - `assets/js/main.js`: Theme follows system preference (`matchMedia`), reacts to live system changes; manual toggle choice travels across internal links via `?theme=` URL parameter — **no localStorage/cookies (DSGVO)**
+- **Tradeoff:** Theme choice persists during navigation (URL param) but not across browser sessions — intentional, avoids any client-side storage.
+- **Verified:** 23/23 tests passed; both modes visually checked via local server
+
+---
+
 ## 2026-08-24: Revert texts to original site wording (customer feedback)
 - **Task:** Customer reported texts deviating from the original WordPress site. Full text comparison in TODO.md (items A1–A7, B1–B4, C1–C5).
 - **Changes:**

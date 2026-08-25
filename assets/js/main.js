@@ -1,6 +1,41 @@
 // Detect base path: "../" for pages/, "./" for root
 const BASE = location.pathname.includes('/pages/') ? '../' : './';
 
+// Theme: follows system preference; manual choice travels via ?theme= URL param (no storage, DSGVO)
+const themeMedia = window.matchMedia('(prefers-color-scheme: light)');
+let themeManual = false;
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  const btn = document.querySelector('.theme-toggle');
+  if (btn) {
+    btn.textContent = theme === 'light' ? '\u263E' : '\u2600';
+    btn.setAttribute('aria-label', theme === 'light' ? 'Dunkles Design aktivieren' : 'Helles Design aktivieren');
+  }
+}
+
+// URL param wins over system preference
+const urlTheme = new URLSearchParams(location.search).get('theme');
+if (urlTheme === 'light' || urlTheme === 'dark') {
+  themeManual = true;
+  applyTheme(urlTheme);
+} else {
+  applyTheme(themeMedia.matches ? 'light' : 'dark');
+}
+themeMedia.addEventListener('change', e => {
+  if (!themeManual) applyTheme(e.matches ? 'light' : 'dark');
+});
+
+// Carry manual theme choice across internal navigation
+document.addEventListener('click', e => {
+  const a = e.target.closest('a');
+  if (!a || !a.href || a.origin !== location.origin) return;
+  const url = new URL(a.href);
+  if (themeManual) url.searchParams.set('theme', document.documentElement.dataset.theme);
+  else url.searchParams.delete('theme');
+  a.href = url.toString();
+});
+
 // Load HTML includes
 async function loadIncludes() {
   const header = document.getElementById('site-header');
@@ -63,6 +98,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Load includes first, then messages
   await loadIncludes();
   await loadMessages();
+
+  // Theme toggle lives in the header include, bind after load
+  applyTheme(document.documentElement.dataset.theme);
+  const themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      themeManual = true;
+      const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      const url = new URL(location.href);
+      url.searchParams.set('theme', next);
+      history.replaceState(null, '', url);
+    });
+  }
 
   // Inject back-to-gallery button on galerie sub-pages (below the gallery grid)
   const galleryMain = document.querySelector('main.shell');
