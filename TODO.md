@@ -358,11 +358,12 @@ Customer reported that texts differ from the original page. Detailed text-only c
 
 ### Next steps
 
-- [ ] Run `bash tests/run-tests.sh`
-- [ ] Visual check on local server (`python3 -m http.server 8000`)
-- [ ] Add CHANGELOG.md entry
-- [ ] Commit + push → GitHub Pages deploy
-- [ ] Verify live site & inform customer
+- [x] Run `bash tests/run-tests.sh` — 23/23 passed (2026-08-24)
+- [x] Visual check on local server — index + ausbildung verified (2026-08-24)
+- [x] Add CHANGELOG.md entry (2026-08-24)
+- [x] Commit + push → GitHub Pages deploy — commit `d8ca425` (2026-08-24)
+- [x] Verify live site — reverted texts confirmed live (2026-08-24)
+- [ ] Inform customer
 
 ---
 
