@@ -124,7 +124,7 @@ When a visitor clicks an image in any gallery, a lightbox overlay opens. Require
 
 ### 3.5 Gallery Page – Back Navigation
 
-Each gallery sub-page (`/pages/galerie/*.html`) must display a prominent **„Schließen"** button (or back link) that returns the visitor to the main index page (`/index.html#gallery`). It should be visible without scrolling (e.g. fixed or near the top of the page).
+Each gallery sub-page (`/pages/galerie/*.html`) must display a prominent **„Schließen"** button (or back link) that returns the visitor to the main index page (`/index.html#services`). It should be visible without scrolling (e.g. fixed or near the top of the page).
 
 ---
 
@@ -136,7 +136,7 @@ A static JSON file that JavaScript fetches on page load. Admin edits via GitHub 
 
 | Type | Example |
 |------|---------|
-| Job postings | "Für Herbst 2026 suchen wir interessierte und engagierte Auszubildende" |
+| Job postings | "Für Herbst 2027 suchen wir interessierte und engagierte Auszubildende" |
 | Opening hours | "Mo. – Do.: 7.00 – 16.00 Uhr / Freitag: geschlossen" |
 | Announcements | "Betriebsurlaub 23.12. – 06.01." |
 
@@ -158,7 +158,7 @@ A static JSON file that JavaScript fetches on page load. Admin edits via GitHub 
   "announcement": {
     "enabled": true,
     "title": "Ausbildung",
-    "text": "Für Herbst 2026 suchen wir interessierte und engagierte Auszubildende"
+    "text": "Für Herbst 2027 suchen wir interessierte und engagierte Auszubildende"
   },
   "opening_hours": {
     "lines": [
@@ -225,7 +225,7 @@ fetch(BASE + 'data/messages.json').then(r => r.json()).then(data => {
 Header Nav:
 ├── Über uns (#about)
 ├── Leistungen (#services)
-├── Einblicke (#gallery)
+├── Einblicke (/pages/galerie/)
 ├── Ausbildung (#apprenticeship)
 └── Kontakt (#contact)
 

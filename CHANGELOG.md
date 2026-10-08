@@ -4,6 +4,12 @@ All notable changes to the Maier Metallbau website.
 
 ---
 
+## 2026-10-08: Customer content and gallery updates
+- Updated the company profile, customer list, and current team size on the homepage.
+- Removed the duplicate homepage reference gallery and updated the Ausbildung start to autumn 2027.
+- Added 2026 apprenticeship pay details and adjusted the gallery image assignments per customer feedback.
+- Removed the redundant Einblicke service card; the header link now opens the combined gallery directly.
+
 ## 2026-08-25: Light/Dark mode via system preference + toggle (customer feedback)
 - **Task:** Customer found the site too dark; requested respecting system/browser light/dark preference plus a manual toggle.
 - **Changes:**

@@ -15,7 +15,7 @@
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home page with anchors: `#about`, `#services`, `#gallery`, `#apprenticeship`, `#contact` |
+| `index.html` | Home page with anchors: `#about`, `#services`, `#apprenticeship`, `#contact`; Einblicke links to `pages/galerie/` |
 | `includes/header.html` | Shared header/nav (loaded via JS) |
 | `includes/footer.html` | Shared footer (loaded via JS) |
 | `assets/css/style.css` | All styles; mobile rules in media query at bottom |

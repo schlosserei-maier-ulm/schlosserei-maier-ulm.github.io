@@ -1,5 +1,5 @@
 // Detect base path: "../" for pages/, "./" for root
-const BASE = location.pathname.includes('/pages/') ? '../' : './';
+const BASE = location.pathname.includes('/pages/galerie/') ? '../../' : location.pathname.includes('/pages/') ? '../' : './';
 
 // Theme: follows system preference; manual choice travels via ?theme= URL param (no storage, DSGVO)
 const themeMedia = window.matchMedia('(prefers-color-scheme: light)');

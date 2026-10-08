@@ -39,7 +39,7 @@ Navigate to base URL, hard-reload (ignore cache).
 - [ ] Logo image `Maier-Logo-2.jpg` loads (HTTP 200, `alt="Maier Metallbau"`)
 - [ ] Brand text shows "MAIER METALLBAU GMBH" and "SCHLOSSEREI · ULM"
 - [ ] Nav links exist: Über uns, Leistungen, Einblicke, Ausbildung, Kontakt
-- [ ] Nav links point to `#about`, `#services`, `#gallery`, `#apprenticeship`, `#contact`
+- [ ] Nav links point to `#about`, `#services`, `pages/galerie/`, `#apprenticeship`, `#contact`
 - [ ] Phone link `tel:073163784` present in mobile nav (desktop header button removed)
 - [ ] Theme toggle button (☀/☾) present, switches light/dark mode
 - [ ] **No `{BASE}` or `%7BBASE%7D` in any URL or text** (critical)
@@ -57,7 +57,7 @@ Navigate to base URL, hard-reload (ignore cache).
 - [ ] Heading "Herzlich willkommen bei der Maier Metallbau GmbH"
 - [ ] Text mentions "3. Generation" and "Familienbetrieb"
 - [ ] Customer list includes: DB Deutsche Bahn, Stadtwerke Ulm, Stadt Ulm
-- [ ] Team info: "4 Metallbau-Meister · 1 Geselle · 2 Auszubildende"
+- [ ] Team info: "3 Metallbau-Meister · 1 Metallbau-Geselle · 1 Auszubildenden · 1 kaufmännische Angestellte"
 
 ### 1.4 Opening Hours (loaded from data/messages.json)
 - [ ] "Öffnungszeiten" heading visible
@@ -67,7 +67,7 @@ Navigate to base URL, hard-reload (ignore cache).
 
 ### 1.5 Services Section (`#services`)
 - [ ] Heading "Vielseitiges Angebot"
-- [ ] 8 service cards present (count = 8), each with image + heading + description:
+- [ ] 7 service cards present (count = 7), each with image + heading + description:
   1. **Balkone** → `pages/balkone.html` — image `Balkongeländer-mit-pulverbeschichteten-Lamellen.jpg`
   2. **Treppen** → `pages/treppen.html` — image `Stahltreppe-verzinkt-mit-Gitterroststufen-und-Edelstahlhandlauf-e1472556612387.jpg`
   3. **Vordächer** → `pages/vordaecher.html` — image `Edelstahlvordach-mit-Klarglasfüllung.jpg`
@@ -75,22 +75,12 @@ Navigate to base URL, hard-reload (ignore cache).
   5. **Gartentüren** → `pages/gartentueren.html` — image `Gartentüre-aus-Flachstahl.jpg`
   6. **Briefkastenanlagen** → `pages/briefkastenanlagen.html` — image `Freistehender-Briefkasten.jpg`
   7. **Sonderkonstruktionen** → `pages/sonderkonstruktionen.html` — image `Blumenkübel-II.jpg`
-   8. **Einblicke** → `pages/galerie.html` — image `Stahlwangentreppe-mit-Podest.jpg`
-- [ ] All 8 service card images load (HTTP 200, none broken)
+- [ ] All 7 service card images load (HTTP 200, none broken)
 
-### 1.6 Gallery Section (`#gallery`)
-- [ ] Heading "Ausgewählte Referenzen"
-- [ ] Container has `data-gallery` attribute (enables lightbox)
-- [ ] 8 gallery images present and loading (HTTP 200):
-  1. `Treppengeländer-aus-Klarglas-mit-VA-Punkthaltern.jpg` — alt "Treppengeländer aus Glas"
-  2. `Hoftor-mit-Gartentüre.-Rahmen-aus-pulverbeschitetem-Material-Füllung-Trepa.jpg` — alt "Hoftor mit Trespa"
-  3. `Blumenkübel-I.jpg` — alt "Blumenkübel"
-  4. `IMG_0774-e1495619568874.jpg` — alt "Glasgeländer"
-  5. `Fenstergitter-in-verzinkter-Ausführung.jpg` — alt "Fenstergitter"
-  6. `Rampe-II-scaled-e1728295107225.jpeg` — alt "Rollstuhlrampe"
-  7. `Sichtschutz-Edelstahlleiste-Motivglas-I.jpg` — alt "Sichtschutz"
-  8. `Edelstahltreppengeländer.jpg` — alt "Edelstahlgeländer"
-- [ ] All images have non-empty `alt` text
+### 1.6 Gallery Navigation
+- [ ] The duplicate "Einblicke – Ausgewählte Referenzen" homepage section and extra service card are removed
+- [ ] Header navigation "Einblicke" opens `pages/galerie/`
+- [ ] All gallery images have non-empty `alt` text
 
 ### 1.7 Apprenticeship Section (`#apprenticeship`)
 - [ ] Heading mentions "Metallbauer (m/w/d)"
@@ -119,11 +109,11 @@ Navigate to base URL, hard-reload (ignore cache).
 ### 1.10 Announcement Banner (from data/messages.json)
 - [ ] If `announcement.enabled` is `true`, banner appears at top of page
 - [ ] Banner title: "Ausbildung" (from messages.json)
-- [ ] Banner text contains "Für Herbst 2026" (from messages.json)
+- [ ] Banner text contains "Für Herbst 2027" (from messages.json)
 - [ ] Close button (×) exists; clicking it dismisses the banner
 
 ### 1.11 Homepage Image Count
-- [ ] **Total: 21 `<img>` tags** on homepage (excluding header/footer logo = 19 page images + 2 logos)
+- [ ] **Total: 14 `<img>` tags** on homepage (12 page images + 2 header/footer logos)
 
 ---
 
@@ -480,7 +470,7 @@ Navigate to sitemap page, hard-reload.
 - [ ] On homepage: if `enabled: true`, banner appears
 - [ ] On a subpage (e.g. balkone.html): banner also appears
 - [ ] Banner shows title from JSON: "Ausbildung"
-- [ ] Banner shows text from JSON containing "Für Herbst 2026"
+- [ ] Banner shows text from JSON containing "Für Herbst 2027"
 - [ ] Close button (×) click removes banner from DOM
 
 ### 10.3 Opening Hours
@@ -490,9 +480,9 @@ Navigate to sitemap page, hard-reload.
 
 ---
 
-## 11. Lightbox Functionality (Homepage)
+## 11. Lightbox Functionality (Gallery Page)
 
-Test on homepage gallery section (`#gallery` with `data-gallery`):
+Test on the full gallery page (`pages/galerie/` with `data-gallery="all"`):
 
 - [ ] Click first gallery image → lightbox overlay appears
 - [ ] Lightbox has class `lightbox` and is visible (not `display: none`)
@@ -513,11 +503,11 @@ All internal links on the homepage must resolve (not 404):
 - [ ] Contact "Anfahrt & Route" → `pages/anfahrt.html`
 
 ### 12.2 Subpage Header Navigation
-From any subpage (e.g. `pages/balkone.html`):
+From any subpage (including `pages/galerie/balkone.html`):
 - [ ] Logo link → `../index.html` (resolves, not 404, not `{BASE}`)
 - [ ] "Über uns" → `../index.html#about`
 - [ ] "Leistungen" → `../index.html#services`
-- [ ] "Einblicke" → `../index.html#gallery`
+- [ ] "Einblicke" → gallery overview (`../pages/galerie/` on shallow pages, `../../pages/galerie/` on gallery pages)
 - [ ] "Ausbildung" → `../index.html#apprenticeship`
 - [ ] "Kontakt" → `../index.html#contact`
 - [ ] Phone link: `tel:073163784`

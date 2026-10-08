@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           'Balkongeländer-mit-VA-Halterungen-und-Milchglasfüllung.jpg',
           'Balkongeländer-mit-pulverbeschichteten-Lamellen.jpg',
           'Balkongeländer-mit-satiniertem-Glas.jpg',
+          'Edelstahl-mit-Klarglas-ohne-Handlauf.jpg',
           'Verz.-Ausführung-Füllung-Trespaplatten-II.jpg',
           'Verzinkte-Ausführung-Füllung-Trespaplatten.jpg',
           'Verz.-Ausführung-Lochblechfüllung.jpg'
@@ -54,8 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         ],
         'franzoesische-balkone': [
           'Franzoesischer-Balkon-Edelstahl-Klarglas-Variante-1.jpg',
-          'Franzoesischer-Balkon-Edelstahl-Klarglas-Variante-2.jpg',
-          'Edelstahl-mit-Klarglas-ohne-Handlauf.jpg'
+          'Franzoesischer-Balkon-Edelstahl-Klarglas-Variante-2.jpg'
         ],
         'gartentueren': [
           'Gartentuer-mit-Edelstahlrahmen.jpg',
@@ -69,8 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           'Briefkasten.jpg',
           'Briefkasten-Mehrfach-Edelstahl.jpg',
           'Freistehender-Briefkasten.jpg',
-          'Gartentüre-mit-Briefkastenanlage.jpg',
-          'Briefkasten-Wandmontage-Edelstahl.jpg'
+          'Gartentüre-mit-Briefkastenanlage.jpg'
         ],
         'sonderkonstruktionen': [
           'Blumenkübel-II.jpg',
@@ -101,6 +100,7 @@ function loadAllGalleries(basePath, gallery) {
       'Balkongeländer-mit-VA-Halterungen-und-Milchglasfüllung.jpg',
       'Balkongeländer-mit-pulverbeschichteten-Lamellen.jpg',
       'Balkongeländer-mit-satiniertem-Glas.jpg',
+          'Edelstahl-mit-Klarglas-ohne-Handlauf.jpg',
       'Verz.-Ausführung-Füllung-Trespaplatten-II.jpg',
       'Verzinkte-Ausführung-Füllung-Trespaplatten.jpg',
       'Verz.-Ausführung-Lochblechfüllung.jpg'
@@ -130,8 +130,7 @@ function loadAllGalleries(basePath, gallery) {
     ],
     'franzoesische-balkone': [
       'Franzoesischer-Balkon-Edelstahl-Klarglas-Variante-1.jpg',
-      'Franzoesischer-Balkon-Edelstahl-Klarglas-Variante-2.jpg',
-      'Edelstahl-mit-Klarglas-ohne-Handlauf.jpg'
+      'Franzoesischer-Balkon-Edelstahl-Klarglas-Variante-2.jpg'
     ],
     'gartentueren': [
       'Gartentuer-mit-Edelstahlrahmen.jpg',
@@ -145,8 +144,7 @@ function loadAllGalleries(basePath, gallery) {
       'Briefkasten.jpg',
       'Briefkasten-Mehrfach-Edelstahl.jpg',
       'Freistehender-Briefkasten.jpg',
-      'Gartentüre-mit-Briefkastenanlage.jpg',
-      'Briefkasten-Wandmontage-Edelstahl.jpg'
+      'Gartentüre-mit-Briefkastenanlage.jpg'
     ],
     'sonderkonstruktionen': [
       'Blumenkübel-II.jpg',
