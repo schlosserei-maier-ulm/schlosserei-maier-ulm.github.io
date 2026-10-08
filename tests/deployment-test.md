@@ -40,7 +40,8 @@ Navigate to base URL, hard-reload (ignore cache).
 - [ ] Brand text shows "MAIER METALLBAU GMBH" and "SCHLOSSEREI · ULM"
 - [ ] Nav links exist: Über uns, Leistungen, Einblicke, Ausbildung, Kontakt
 - [ ] Nav links point to `#about`, `#services`, `#gallery`, `#apprenticeship`, `#contact`
-- [ ] Phone link `tel:073163784` present
+- [ ] Phone link `tel:073163784` present in mobile nav (desktop header button removed)
+- [ ] Theme toggle button (☀/☾) present, switches light/dark mode
 - [ ] **No `{BASE}` or `%7BBASE%7D` in any URL or text** (critical)
 
 ### 1.2 Hero Section

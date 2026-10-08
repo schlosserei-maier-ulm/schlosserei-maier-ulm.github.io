@@ -262,9 +262,6 @@ a:hover {
 /* Phone link inside nav – mobile only */
 .nav__phone { display: none; }
 
-/* Phone button – desktop only */
-.btn--phone-desktop { display: inline-flex; }
-
 .brand__text {
   display: flex;
   flex-direction: column;
@@ -728,9 +725,6 @@ p {
 
   /* Show hamburger */
   .nav-toggle { display: flex; }
-
-  /* Hide desktop phone button */
-  .btn--phone-desktop { display: none; }
 
   /* Collapsible nav */
   .nav {
