@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         ],
         'briefkastenanlagen': [
           'Briefkasten.jpg',
-          'Briefkasten-Mehrfach-Edelstahl.jpg',
           'Freistehender-Briefkasten.jpg',
           'Gartentüre-mit-Briefkastenanlage.jpg'
         ],
         'sonderkonstruktionen': [
           'Blumenkübel-II.jpg',
+          'Briefkasten-Mehrfach-Edelstahl.jpg',
           'Blumenkübel-I.jpg',
           'Holzregal.jpg',
           'Rampe-II-scaled-e1728295107225.jpeg',
@@ -142,12 +142,12 @@ function loadAllGalleries(basePath, gallery) {
     ],
     'briefkastenanlagen': [
       'Briefkasten.jpg',
-      'Briefkasten-Mehrfach-Edelstahl.jpg',
       'Freistehender-Briefkasten.jpg',
       'Gartentüre-mit-Briefkastenanlage.jpg'
     ],
     'sonderkonstruktionen': [
       'Blumenkübel-II.jpg',
+      'Briefkasten-Mehrfach-Edelstahl.jpg',
       'Blumenkübel-I.jpg',
       'Holzregal.jpg',
       'Rampe-II-scaled-e1728295107225.jpeg',
